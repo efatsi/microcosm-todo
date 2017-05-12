@@ -1,21 +1,15 @@
 import React from 'react'
-import FilterLink from './filterLink'
+import FilterLink from '../presenters/filterLink'
 
-const Footer = ({ currentFilter }) => (
+const Footer = () => (
   <p>
     Show:
     {" "}
-    <FilterLink currentFilter={currentFilter}>
-      All
-    </FilterLink>
+    <FilterLink filter="All" />
     {", "}
-    <FilterLink currentFilter={currentFilter}>
-      Active
-    </FilterLink>
+    <FilterLink filter="Active" />
     {", "}
-    <FilterLink currentFilter={currentFilter}>
-      Completed
-    </FilterLink>
+    <FilterLink filter="Completed" />
   </p>
 )
 
