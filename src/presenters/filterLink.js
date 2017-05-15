@@ -1,5 +1,6 @@
 import React from 'react'
 import Presenter from 'microcosm/addons/presenter'
+import ActionButton from 'microcosm/addons/action-button'
 import { setFilter } from '../actions'
 
 class FilterLink extends Presenter {
@@ -18,14 +19,9 @@ class FilterLink extends Presenter {
     }
 
     return (
-      <a href="#"
-         onClick={e => {
-           e.preventDefault()
-           this.repo.push(setFilter, filter)
-         }}
-      >
+      <ActionButton action={setFilter} value={filter} tag='a' href='#'>
         {filter}
-      </a>
+      </ActionButton>
     )
   }
 }
