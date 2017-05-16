@@ -1,11 +1,11 @@
 import { setFilter } from '../actions'
 
-class Todos {
+class Filter {
   getInitialState () {
     return "All"
   }
 
-  setFilter (state, newFilter) {
+  setFilter (_state, newFilter) {
     return newFilter
   }
 
@@ -16,4 +16,4 @@ class Todos {
   }
 }
 
-export default Todos
+export default Filter

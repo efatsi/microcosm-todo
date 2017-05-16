@@ -2,7 +2,7 @@ import React from 'react'
 import Presenter from 'microcosm/addons/presenter'
 
 import AddTodo from '../presenters/addTodo'
-import VisibleTodoList from '../presenters/visibleTodoList'
+import TodoList from '../presenters/todoList'
 import Footer from '../views/footer'
 
 class App extends Presenter {
@@ -10,7 +10,7 @@ class App extends Presenter {
     return (
       <div>
         <AddTodo />
-        <VisibleTodoList />
+        <TodoList />
         <Footer />
       </div>
     )
