@@ -1,17 +1,17 @@
 let nextTodoId = 0
 
-export function addTodo (text) {
+export function addTodo(data) {
   return {
     id: nextTodoId++,
     completed: false,
-    text
+    text: data.text
   }
 }
 
-export function toggleTodo (id) {
+export function toggleTodo(id) {
   return id
 }
 
-export function setFilter (newFilter) {
+export function setFilter(newFilter) {
   return newFilter
 }

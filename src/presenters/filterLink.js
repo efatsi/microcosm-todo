@@ -16,13 +16,13 @@ class FilterLink extends Presenter {
 
     if (currentFilter === filter) {
       return <span>{filter}</span>
+    } else {
+      return (
+        <ActionButton action={setFilter} value={filter} tag='a' href='#'>
+          {filter}
+        </ActionButton>
+      )
     }
-
-    return (
-      <ActionButton action={setFilter} value={filter} tag='a' href='#'>
-        {filter}
-      </ActionButton>
-    )
   }
 }
 

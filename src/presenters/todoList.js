@@ -3,9 +3,9 @@ import Presenter from 'microcosm/addons/presenter'
 import { toggleTodo } from '../actions'
 
 class VisibleTodoList extends Presenter {
-  getModel () {
+  getModel() {
     return {
-      todos: (state) => {
+      todos: state => {
         switch (state.currentFilter) {
           case 'All':
             return state.todos
@@ -20,16 +20,16 @@ class VisibleTodoList extends Presenter {
     }
   }
 
-  handleToggle (id) {
+  handleToggle(id) {
     this.repo.push(toggleTodo, id)
   }
 
-  render () {
+  render() {
     let { todos } = this.model
 
     return (
       <ul>
-        {todos.map(todo =>
+        {todos.map(todo => (
           <li
             key={todo.id}
             onClick={() => this.handleToggle(todo.id)}
@@ -39,7 +39,7 @@ class VisibleTodoList extends Presenter {
           >
             {todo.text}
           </li>
-        )}
+        ))}
       </ul>
     )
   }

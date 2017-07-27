@@ -6,7 +6,11 @@ class Todos {
   }
 
   addTodo (state, todo) {
-    return state.concat(todo)
+    if (todo.text.length) {
+      return state.concat(todo)
+    } else {
+      return state
+    }
   }
 
   toggleTodo (state, id) {
